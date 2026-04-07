@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: 80px 1fr; 
+  height: 100vh;
+  /* Esse fundo roxo é o que faz o vidro brilhar */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* --- HEADER (LOGO E TITULO) --- */
+.logo {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  /* Empurra o logo para a direita para não bater no botão */
+  padding-left: 80px; 
+  font-family: "Lobster", sans-serif;
+   background: linear-gradient(135deg, #8a265d 0%, #370423 100%);
+}
+
+.logo img {
+  height: 70px;
+  margin-right: 15px;
+}
+
+/* --- ÁREA DO BOTÃO HAMBÚRGUER --- */
+.menu {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 10;
+}
+
+.btn-menu {
+  background: none;
+  backdrop-filter: blur(10px);
+  border:none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-menu:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- O MENU LATERAL (VIDRO) --- */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -320px; /* Escondido à esquerda */
+  width: 300px;
+  height: 100vh;
+  /* Vidro mais escuro para ler melhor no fundo roxo */
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 100px 30px;
+  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  z-index: 1000;
+}
+
+/* Quando o JS ativa o menu */
+.menu-lateral.ativo {
+  left: 0;
+}
+
+.menu-lateral a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(10px); /* Efeito lateral chique */
+}
+
+/* Botão de fechar (X) */
+.btn-fechar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* --- CONTEÚDO --- */
+main {
+  grid-row: 2;
+  padding: 40px;
+}
