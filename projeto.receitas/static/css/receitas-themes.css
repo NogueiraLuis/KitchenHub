@@ -8,8 +8,8 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: 80px 1fr; 
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr;
   height: 100vh;
   /* Esse fundo roxo é o que faz o vidro brilhar */
   color: white;
@@ -22,9 +22,9 @@ body {
   display: flex;
   align-items: center;
   /* Empurra o logo para a direita para não bater no botão */
-  padding-left: 80px; 
+  padding-left: 80px;
   font-family: "Lobster", sans-serif;
-   background: linear-gradient(135deg, #8a265d 0%, #370423 100%);
+  background: linear-gradient(135deg, #8a265d 0%, #370423 100%);
 }
 
 .logo img {
@@ -43,7 +43,7 @@ body {
 .btn-menu {
   background: none;
   backdrop-filter: blur(10px);
-  border:none;
+  border: none;
   color: white;
   font-size: 30px;
   padding: 10px;
@@ -64,14 +64,14 @@ body {
   width: 300px;
   height: 100vh;
   /* Vidro mais escuro para ler melhor no fundo roxo */
-  background: rgba(0, 0, 0, 0.3); 
+  background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   padding: 100px 30px;
-  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   z-index: 1000;
 }
 
