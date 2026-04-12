@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/receitas-themes.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <title>Receitas</title>
   </head>
   <body>
@@ -15,34 +18,46 @@
 
     <aside class="menu">
       <button class="btn-menu" id="btn-menu">
-    <i class="fa-solid fa-bars"></i> </button>
+        <i class="fa-solid fa-bars"></i>
+      </button>
 
-<nav class="menu-lateral" id="menu-lateral">
-    <button class="btn-fechar" id="btn-fechar">&times;</button>
-    <a href="#">Sessões</a>
-    <a href="#">Favoritos</a>
-    <a href="#">Configurações</a>
-</nav>
+      <nav class="menu-lateral" id="menu-lateral">
+        <button class="btn-fechar" id="btn-fechar">&times;</button>
+        <a href="sessoes.html">Sessões</a>
+        <a href="#">Favoritos</a>
+        <a href="#">Sobre nós</a>
+      </nav>
     </aside>
+
     <main id="main-content">
       <section class="pesquisa">
+        <h1 id="title-theme">Título</h1>
 
-        <h1 id="title-theme" >Título</h1>
-  
-        <input id="search-recipe" type="text" placeholder="Busque a receita aqui!">
-
+        <input
+          id="search-recipe"
+          type="text"
+          placeholder="Busque a receita aqui!"
+        />
       </section>
 
       <section class="card-recipe">
         <div class="teste">
-          <aside>
-            <img src="/assets/logo.png" alt="">
+          <aside id="section-img">
+            <img src="/assets/KitchenHub.png" alt="" />
           </aside>
-          <p>meu conteúdo aqui</p>
+          <div class="info-comida">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aperiam esse obcaecati totam adipisci odit exercitationem, sapiente modi est iure.</p>
+          </div>
+        </div>
+        <div class="teste">
+          <aside id="section-img">
+            <img src="/assets/KitchenHub.png" alt="" />
+          </aside>
+          <div class="info-comida">
+            <p>infos aqui nesse container</p>
+          </div>
         </div>
       </section>
-
-      
     </main>
 
     <script src="/static/js/menuhamb.js"></script>
