@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/info-receita.css">
+    <title>Receita</title>
+  </head>
+  <body>
+    <main id="detalhe-receita">
+      <article class="recipe-card">
+
+
+        <!-- HEADER COM ILUSTRAÇÃO -->
+
+        <header class="recipe-header">
+        
+
+          <figure class="recipe-visual">
+            <img id="recipe-image" src="/assets/macarrão.jpg" alt="Foto da receita finalizada" />
+          </figure>
+
+          <div class="recipe-meta">
+            <h1 id="recipe-title">Carregando título...</h1>
+            <p>
+              <strong>Tempo:</strong>
+              <time id="recipe-time" datetime="PT20M">-- min</time>
+              <strong>Rendimento:</strong>
+              <span id="recipe-servings">-- pessoas</span>
+            </p>
+            
+            
+          </div>
+        </header>
+
+        <!-- CONTEÚDO DA RECEITA -->
+
+        <div class="recipe-content">
+          <section class="ingredientes">
+            <h2>Ingredientes</h2>
+            <ul id="ingredients-list"></ul>
+          </section>
+
+          <section class="preparo">
+            <h2>Modo de Preparo</h2>
+            <div id="recipe-instructions" class="instructions-body">
+              <p>Carregando instruções...</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- RODAPÉ DO SITE -->
+
+        <footer class="recipe-footer">
+          <p>Fonte: Dados via API de Receitas</p>
+        </footer>
+      </article>
+    </main>
+  </body>
+</html>

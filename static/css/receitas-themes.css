@@ -1,5 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+/* 1. Definição de Variáveis (Design System) */
+:root {
+  --primary-gradient: linear-gradient(135deg, #8a265d 0%, #370423 100%);
+  --bg-color: #370423;
+  --card-bg: rgba(105, 41, 76, 0.6);
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --text-white: #ffffff;
+  --accent-pink: #ee08bc;
+  --transition-default: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
+  --font-logo: "Lobster", sans-serif;
+  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 2. Reset Moderno */
 * {
   padding: 0;
   margin: 0;
@@ -7,215 +21,218 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 80px 1fr;
-  height: 100vh;
-  /* Esse fundo roxo é o que faz o vidro brilhar */
-  color: white;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-white);
+  font-family: var(--font-main);
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- HEADER (LOGO E TITULO) --- */
-.logo {
-  grid-row: 1;
+/* --- HEADER --- */
+.main-header {
+  height: 80px;
   display: flex;
   align-items: center;
-  /* Empurra o logo para a direita para não bater no botão */
-  padding-left: 80px;
-  font-family: "Lobster", sans-serif;
-  background: linear-gradient(135deg, #8a265d 0%, #370423 100%);
+  padding: 0 20px 0 80px; /* Espaço para o botão hambúrguer fixo */
+  background: var(--primary-gradient);
 }
 
-.logo img {
-  height: 70px;
-  margin-right: 15px;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-/* --- ÁREA DO BOTÃO HAMBÚRGUER --- */
-.menu {
-  position: absolute;
+.logo-container img {
+  height: 60px;
+}
+
+.brand-name {
+  font-family: var(--font-logo);
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+/* --- MENU LATERAL (VIDRO) --- */
+.menu-toggle {
+  position: fixed;
   top: 15px;
   left: 20px;
-  z-index: 10;
-}
-
-.btn-menu {
-  background: none;
+  z-index: 1001;
+  background: var(--glass-bg);
   backdrop-filter: blur(10px);
-  border: none;
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
-  font-size: 30px;
+  font-size: 24px;
   padding: 10px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: var(--transition-default);
 }
 
-.btn-menu:hover {
+.menu-toggle:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --- O MENU LATERAL (VIDRO) --- */
-.menu-lateral {
+.side-menu {
   position: fixed;
   top: 0;
-  left: -320px; /* Escondido à esquerda */
+  left: -320px;
   width: 300px;
   height: 100vh;
-  /* Vidro mais escuro para ler melhor no fundo roxo */
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  flex-direction: column;
   padding: 100px 30px;
-  transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: var(--transition-default);
   z-index: 1000;
 }
 
-/* Quando o JS ativa o menu */
-.menu-lateral.ativo {
+.side-menu.ativo {
   left: 0;
 }
 
-.menu-lateral a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  padding: 12px;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.menu-lateral a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(10px); /* Efeito lateral chique */
-}
-
-/* Botão de fechar (X) */
-.btn-fechar {
+.btn-close {
   position: absolute;
   top: 20px;
   right: 20px;
   background: none;
   border: none;
   color: white;
-  font-size: 30px;
+  font-size: 35px;
   cursor: pointer;
+  line-height: 1;
 }
 
-/* --- CONTEÚDO --- */
-#main-content{
+.nav-links {
+  list-style: none;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  background-color: #370423;
-  padding: 10px;
-  height: auto;
-  gap: 50px;
+  gap: 10px;
 }
 
-.pesquisa{
+.nav-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  background: var(--glass-bg);
+  transform: translateX(10px);
+}
+
+/* --- ÁREA DE BUSCA --- */
+.search-section {
+  padding: 60px 20px;
+  text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 10px;
-  width: 100%;
-  height: auto;
-  gap: 25px;
+  align-items: center;
+  gap: 30px;
 }
 
-#title-theme{
-  font-family: "Lobster", sans-serif;;
+.section-title {
+  font-family: var(--font-logo);
+  font-size: clamp(2.5rem, 8vw, 5rem);
   font-weight: 100;
-  font-size: 80px;
 }
 
-#search-recipe{
-  width: 50%;
+.search-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+#search-recipe {
+  width: 100%;
   height: 60px;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 25px;
-  border: none;
+  padding: 0 25px;
+  border-radius: 30px;
+  border: 2px solid transparent;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  background-color: white;
 }
 
 #search-recipe:focus {
-  outline: none; /* Tira o padrão */
-  border: 2px solid #ee08bcbb; 
-  box-shadow: 0 0 10px rgba(183, 43, 120, 0.84);
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 15px rgba(238, 8, 188, 0.5);
 }
 
-.card-recipe{
+/* --- GRID DE RECEITAS --- */
+.recipe-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: auto;
-  width: 95%;
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 30px;
+  padding: 0 30px 50px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.recipe-card {
+  background: var(--card-bg);
   border-radius: 15px;
-  padding: 20px;
-  background-color: #69294c98;
-}
-
-.teste {
-  background-color: #894c6ea7;
-  border-radius: 10px;
-  width: 100%;
-  height: 250px;
   display: flex;
-  padding: 15px;
-  overflow: hidden; /* Importante para a imagem não "vazar" o border-radius */
+  overflow: hidden;
+  height: 250px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* 1. Garanta que o container da imagem ocupe o resto do espaço (60%) */
-#section-img {
-  width: 40%;
+.recipe-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.recipe-card__image {
+  flex: 0 0 40%;
   height: 100%;
+  border-radius: 15px;
+  background-color: var(--card-bg);
 }
 
-/* 2. A imagem deve preencher 100% do container #img */
-#section-img img {
+.recipe-card__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block; /* Remove espaços vazios estranhos abaixo da imagem */
+  object-fit: contain;
 }
 
-.info-comida{
-  width: 60%;
-  font-size: 1.5rem;
+.recipe-card__info {
+  flex: 1;
+  padding: 25px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
 }
 
-@media (max-width: 1024px){
-
-  .card-recipe{
-    display: flex;
-    flex-direction: column;
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+  .recipe-grid {
+    grid-template-columns: 1fr; /* Uma coluna no mobile */
+    padding: 0 15px 30px;
   }
 
-  .teste{
-    display: flex;
+  .recipe-card {
+    flex-direction: column; /* Imagem em cima, texto embaixo */
     height: auto;
   }
 
-  .teste aside, #img{
+  .recipe-card__image {
     width: 100%;
-    height: 150px;
-  }
-  .info-comida{
-    width: 100%;
-    font-size: 20px;
+    height: 200px;
   }
 
-  #search-recipe{
-    width: 80%;
-    padding: 10px;
-    font-size: 15px;
-    height: 60px;
+  .main-header {
+    padding-left: 70px;
   }
 }

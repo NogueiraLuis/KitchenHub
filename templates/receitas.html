@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -9,60 +9,71 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <title>Receitas</title>
+    <title>KitchenHub - Suas Receitas Favoritas</title>
   </head>
   <body>
-    <header class="logo">
-      <img src="/assets/logo.png" alt="" />
-      <h1>KitchenHub</h1>
+
+    <header class="main-header">
+      <div class="logo-container">
+        <img src="/assets/logo.png" alt="Logo KitchenHub" />
+        <h1 class="brand-name">KitchenHub</h1>
+      </div>
+
+      <div class="menu-wrapper">
+        <button class="menu-toggle" id="btn-menu" aria-label="Abrir menu de navegação">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="side-menu" id="menu-lateral" aria-label="Menu Principal">
+          <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">&times;</button>
+          <ul class="nav-links">
+            <li><a href="sessoes.html">Sessões</a></li>
+            <li><a href="#">Favoritos <i class="fa-solid fa-star"></i></a></li>
+            <li><a href="#">Sobre nós</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <aside class="menu">
-      <button class="btn-menu" id="btn-menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav class="menu-lateral" id="menu-lateral">
-        <button class="btn-fechar" id="btn-fechar">&times;</button>
-        <a href="sessoes.html">Sessões</a>
-        <a href="#">Favoritos <i class="fa-solid fa-star"></i></a>
-        <a href="#">Sobre nós</a>
-      </nav>
-    </aside>
-
     <main id="main-content">
-      <section class="pesquisa">
-        <h1 id="title-theme">Título</h1>
+      
+      <section class="search-section" aria-labelledby="title-theme">
+        <h2 id="title-theme" class="section-title">Título da Categoria</h2>
 
-        <input
-          id="search-recipe"
-          type="text"
-          placeholder="Busque a receita aqui!"
-        />
+        <div class="search-container">
+          <input
+            id="search-recipe"
+            type="search"
+            placeholder="Busque a receita aqui!"
+            aria-label="Campo de busca de receitas"
+          />
+        </div>
       </section>
 
-      <section class="card-recipe">
-        <div class="teste">
-          <aside id="section-img">
-            <img src="/assets/KitchenHub.png" alt="" />
-          </aside>
-          <div class="info-comida">
+      <section class="recipe-grid">
+        
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img src="/assets/KitchenHub.png" alt="Foto do prato de [nome da receita]" />
+          </figure>
+          <div class="recipe-card__info">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aperiam esse obcaecati totam</p>
           </div>
-        </div>
-        <div class="teste">
-          <aside id="section-img">
-            <img src="/assets/KitchenHub.png" alt="" />
-          </aside>
-          <div class="info-comida">
-            <p>infos aqui nesse container</p>
+        </article>
+
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img src="/assets/KitchenHub.png" alt="Foto do prato de [nome da receita]" />
+          </figure>
+          <div class="recipe-card__info">
+            <p>Informações extras sobre a receita aparecem aqui neste container.</p>
           </div>
-        </div>
+        </article>
+
       </section>
     </main>
 
     <script src="/static/js/menuhamb.js"></script>
-
     <script src="/static/js/theme.js"></script>
   </body>
 </html>

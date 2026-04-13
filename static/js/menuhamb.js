@@ -1,23 +1,33 @@
-// 1. Selecionamos os elementos pelos IDs que você definiu no HTML
+// Seleção de elementos
 const btnMenu = document.getElementById('btn-menu');
 const btnFechar = document.getElementById('btn-fechar');
 const menuLateral = document.getElementById('menu-lateral');
 
-// 2. Função para abrir o menu
-btnMenu.addEventListener('click', () => {
-    menuLateral.classList.add('ativo');
-});
+// Função para Alternar Menu
+const toggleMenu = (abrir = true) => {
+    menuLateral.classList.toggle('ativo', abrir);
+    // Melhora acessibilidade avisando leitores de tela se o menu está expandido
+    btnMenu.setAttribute('aria-expanded', abrir);
+};
 
-// 3. Função para fechar o menu (clicando no X)
-btnFechar.addEventListener('click', () => {
-    menuLateral.classList.remove('ativo');
-});
+// Eventos Simples
+btnMenu.addEventListener('click', () => toggleMenu(true));
+btnFechar.addEventListener('click', () => toggleMenu(false));
 
-// 4. FECHAR AO CLICAR FORA (Toque de mestre profissional)
-// Se o usuário clicar em qualquer lugar da tela que NÃO seja o menu, ele fecha
+// FECHAR AO CLICAR FORA
 document.addEventListener('click', (evento) => {
-    // Verifica se o clique foi fora do menu e fora do botão de abrir
-    if (!menuLateral.contains(evento.target) && !btnMenu.contains(evento.target)) {
-        menuLateral.classList.remove('ativo');
+    const clicouFora = !menuLateral.contains(evento.target);
+    const clicouNoBotaoAbrir = btnMenu.contains(evento.target);
+    const menuEstaAberto = menuLateral.classList.contains('ativo');
+
+    if (clicouFora && !clicouNoBotaoAbrir && menuEstaAberto) {
+        toggleMenu(false);
+    }
+});
+
+// FECHAR COM A TECLA ESC (O diferencial profissional)
+document.addEventListener('keydown', (evento) => {
+    if (evento.key === 'Escape' && menuLateral.classList.contains('ativo')) {
+        toggleMenu(false);
     }
 });
