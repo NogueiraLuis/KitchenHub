@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +10,26 @@
 body{
     height: 100vh;
     padding: 30px;
-    background-color: rgb(247, 247, 247);
+    background-color: rgb(252, 240, 197);
+}
+
+.back{
+    font-size: 3rem;
+    padding: 10px;
+    display: inline-block;
+    background-color: rgba(233, 205, 103, 0.514);
+    margin-bottom: 25px;
+    border-radius: 10px;
+}
+
+.back a{
+    color: black;
+}
+
+
+.back:hover{
+    transform: scale(1.05);
+    background-color: rgba(166, 154, 110, 0.514);
 }
 
 .recipe-card{
@@ -20,21 +41,38 @@ body{
 .recipe-header{
     display: flex;
     gap: 50px;
+    width: 100%;
+    background-color: rgba(233, 205, 103, 0.514);
+    padding: 15px;
+    border-radius: 15px;
 }
 
 .recipe-visual img{
     border-radius: 15px;
-    width: ;
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-visual{
+    background-color:  rgba(242, 235, 209, 0.836);
+    border-radius: 15px;
 }
 
 .recipe-meta{
     display: flex;
     flex-direction: column;
     gap: 20px;
+   font-family:  "Lobster", sans-serif;
 }
 
-
+h2{
+    font-family: "Lobster", sans-serif;
+}
 
 .recipe-content{
     margin: 50px 0;
+    background-color:  rgba(233, 205, 103, 0.514);
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
 }

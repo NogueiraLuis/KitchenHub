@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="/static/css/info-receita.css">
     <title>Receita</title>
   </head>
   <body>
     <main id="detalhe-receita">
+      <nav class="back"><a href="receitas.html"><i  class="fa-solid fa-arrow-left-long"></i></a></nav>
       <article class="recipe-card">
 
 
@@ -17,7 +23,7 @@
         
 
           <figure class="recipe-visual">
-            <img id="recipe-image" src="/assets/macarrão.jpg" alt="Foto da receita finalizada" />
+            <img id="recipe-image" src="" alt="Foto da receita finalizada" />
           </figure>
 
           <div class="recipe-meta">
@@ -25,6 +31,9 @@
             <p>
               <strong>Tempo:</strong>
               <time id="recipe-time" datetime="PT20M">-- min</time>
+            </p>
+
+            <p>
               <strong>Rendimento:</strong>
               <span id="recipe-servings">-- pessoas</span>
             </p>
@@ -48,12 +57,6 @@
             </div>
           </section>
         </div>
-
-        <!-- RODAPÉ DO SITE -->
-
-        <footer class="recipe-footer">
-          <p>Fonte: Dados via API de Receitas</p>
-        </footer>
       </article>
     </main>
   </body>
