@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/css/receitas-themes.css" />
-    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -12,7 +12,6 @@
     <title>KitchenHub - Suas Receitas Favoritas</title>
   </head>
   <body>
-
     <header class="main-header">
       <div class="logo-container">
         <img src="/assets/logo.png" alt="Logo KitchenHub" />
@@ -20,23 +19,29 @@
       </div>
 
       <div class="menu-wrapper">
-        <button class="menu-toggle" id="btn-menu" aria-label="Abrir menu de navegação">
+        <button
+          class="menu-toggle"
+          id="btn-menu"
+          aria-label="Abrir menu de navegação"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
 
         <nav class="side-menu" id="menu-lateral" aria-label="Menu Principal">
-          <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">&times;</button>
+          <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">
+            &times;
+          </button>
           <ul class="nav-links">
             <li><a href="sessoes.html">Sessões</a></li>
-            <li><a href="#">Favoritos <i class="fa-solid fa-star"></i></a></li>
-            <li><a href="#">Sobre nós</a></li>
+            <li>
+              <a href="#">Favoritos <i class="fa-solid fa-star"></i></a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      
       <section class="search-section" aria-labelledby="title-theme">
         <h2 id="title-theme" class="section-title">Título da Categoria</h2>
 
@@ -51,25 +56,36 @@
       </section>
 
       <section class="recipe-grid">
-        
-        <article class="recipe-card">
-          <figure class="recipe-card__image">
-            <img src="/assets/KitchenHub.png" alt="Foto do prato de [nome da receita]" />
-          </figure>
-          <div class="recipe-card__info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique aperiam esse obcaecati totam</p>
-          </div>
-        </article>
 
         <article class="recipe-card">
           <figure class="recipe-card__image">
-            <img src="/assets/KitchenHub.png" alt="Foto do prato de [nome da receita]" />
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
           </figure>
           <div class="recipe-card__info">
-            <p>Informações extras sobre a receita aparecem aqui neste container.</p>
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+            <button class="ver_receita">
+              <p id="ver-receita" ><strong>Ver receita</strong></p>
+            </button>
+          </div>
+          <div class="ver-receita-fav">
+            <button id="btn-salvar" class="bookmarkBtn">
+              <span class="IconContainer">
+                <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                  <path
+                    d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                  ></path>
+                </svg>
+              </span>
+              <p class="text">Salvar</p>
+            </button>
           </div>
         </article>
-
       </section>
     </main>
 

@@ -183,14 +183,85 @@ body {
   border-radius: 15px;
   display: flex;
   overflow: hidden;
-  height: 250px;
+  height: auto;
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* From Uiverse.io by vinodjangid07 */ 
+.bookmarkBtn {
+  width: 100px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid rgba(173, 14, 112, 0.349);
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.IconContainer {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgb(161, 49, 161), rgb(139, 3, 87));
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  transition-duration: 0.3s;
+}
+
+.icon {
+  border-radius: 1px;
+}
+
+.text {
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  transition-duration: 0.3s;
+  font-size: 1.04em;
+}
+
+.bookmarkBtn:hover .IconContainer {
+  width: 90px;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:hover .text {
+  transform: translate(10px);
+  width: 0;
+  font-size: 0;
+  transition-duration: 0.3s;
+}
+
+.bookmarkBtn:active {
+  transform: scale(0.95);
+  transition-duration: 0.3s;
+}
+
+
 .recipe-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ver_receita{
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: black;
 }
 
 .recipe-card__image {
@@ -207,10 +278,10 @@ body {
 }
 
 .recipe-card__info {
-  flex: 1;
   padding: 25px;
   font-size: 1.1rem;
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   align-items: center;
   line-height: 1.5;
 }
