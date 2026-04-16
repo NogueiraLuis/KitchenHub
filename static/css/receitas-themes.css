@@ -1,4 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+/* 2. Reset Moderno */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo Padrão (Caso algo dê errado) */
+main { 
+  transition: background 0.5s ease;
+ }
+
+/* --- TEMA JAPONESA --- */
+#japonesa {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/comida-japonesa.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+#japonesa .section-title { color: #ffffff; } /* Vermelho sol nascente */
+
+/* --- TEMA MASSAS --- */
+#massa {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/macarrao-italiano.webp');
+    background-size: cover;
+}
+#massa .section-title { color: #ffffff; } /* Amarelo massa */
+
+/* --- TEMA PIZZAS --- */
+#pizza {
+    background: #27ae60; /* Um verde manjericão */
+}
+
+/* --- TEMA SOBREMESAS --- */
+#sobremesa {
+    background: #e17055; /* Um tom de chocolate/doce */
+}
 
 /* 1. Definição de Variáveis (Design System) */
 :root {
@@ -13,12 +49,6 @@
   --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* 2. Reset Moderno */
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 body {
   min-height: 100vh;
