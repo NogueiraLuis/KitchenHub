@@ -4,8 +4,18 @@
   box-sizing: border-box;
 }
 
-.cadastro {
+#cadastro {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 90%; /* Em telas pequenas, ocupa 90% da largura */
+  max-width: 500px; /* Não passa de 500px em telas grandes */
+  padding: 40px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(30px);
+  border-radius: 30px;
 }
 
 main {
@@ -44,11 +54,10 @@ input {
   margin: 8px;
   padding: 12px;
   border-radius: 10px;
-  font-size: ;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 button {
@@ -60,10 +69,11 @@ button {
   cursor: pointer;
 }
 
-button:hover{
-    background-color: #cecece;
-    transform: scale(1.01);
+button:hover {
+  background-color: #cecece;
+  transform: scale(1.01);
 }
+
 
 .cadastrar {
   display: flex;
@@ -76,7 +86,27 @@ button:hover{
   color: rgb(252, 252, 191);
 }
 
+span{
+  color: #fff;
+}
+
 .cadastrar a:hover {
+  color: #f78282;
+  text-decoration: underline;
+}
+
+#backtologin {
+  display: flex;
+  margin-top: 15px;
+  color: #fff;
+}
+
+#voltar-login {
+  text-decoration: none;
+  color: rgb(252, 252, 191);
+}
+
+#voltar-login:hover {
   color: #f78282;
   text-decoration: underline;
 }

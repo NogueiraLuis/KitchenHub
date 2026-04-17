@@ -7,48 +7,64 @@
 }
 
 /* Estilo Padrão (Caso algo dê errado) */
-main { 
+main {
   transition: background 0.5s ease;
- }
+}
 
 /* --- TEMA JAPONESA --- */
 #japonesa {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/comida-japonesa.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/comida-japonesa.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
-#japonesa .section-title { color: #ffffff; } /* Vermelho sol nascente */
+#japonesa .section-title {
+  color: #ffffff;
+} /* Vermelho sol nascente */
 
 /* --- TEMA MASSAS --- */
 #massa {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/assets/macarrao-italiano.webp');
-    background-size: cover;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/macarrao-italiano.webp");
+  background-size: cover;
 }
-#massa .section-title { color: #ffffff; } /* Amarelo massa */
+#massa .section-title {
+  color: #ffffff;
+} /* Amarelo massa */
 
 /* --- TEMA PIZZAS --- */
 #pizza {
-    background: #27ae60; /* Um verde manjericão */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/pizzabg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* --- TEMA SOBREMESAS --- */
 #sobremesa {
-    background: #e17055; /* Um tom de chocolate/doce */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/sobremesabg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* 1. Definição de Variáveis (Design System) */
 :root {
-  --primary-gradient: linear-gradient(135deg, #8a265d 0%, #370423 100%);
-  --bg-color: #370423;
+  /* Ou um preto transparente para um tema dark */
+  --bg-nav-dark: rgba(131, 39, 150, 0.192);
+  --bg-color: #000000c4;
   --card-bg: rgba(105, 41, 76, 0.6);
   --glass-bg: rgba(255, 255, 255, 0.1);
   --text-white: #ffffff;
   --accent-pink: #ee08bc;
   --transition-default: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
   --font-logo: "Lobster", sans-serif;
-  --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
-
 
 body {
   min-height: 100vh;
@@ -62,11 +78,13 @@ body {
 
 /* --- HEADER --- */
 .main-header {
+  position: fixed;
   height: 80px;
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 0 20px 0 80px; /* Espaço para o botão hambúrguer fixo */
-  background: var(--primary-gradient);
+  background: var(--bg-nav-dark);
 }
 
 .logo-container {
@@ -213,12 +231,21 @@ body {
   border-radius: 15px;
   display: flex;
   overflow: hidden;
+  width: 100%;
   height: auto;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-/* From Uiverse.io by vinodjangid07 */ 
+.ver-receita-fav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* From Uiverse.io by vinodjangid07 */
 .bookmarkBtn {
   width: 100px;
   height: 40px;
@@ -279,19 +306,24 @@ body {
   transition-duration: 0.3s;
 }
 
-
 .recipe-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
-.ver_receita{
+.ver_receita {
   padding: 15px;
   border: none;
   border-radius: 10px;
   font-size: 1rem;
   color: #ffffff;
   background-color: black;
+  cursor: pointer;
+}
+
+.ver_receita:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
 }
 
 .recipe-card__image {

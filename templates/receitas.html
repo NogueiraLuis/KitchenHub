@@ -12,37 +12,37 @@
     <title>KitchenHub - Suas Receitas Favoritas</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="logo-container">
-        <img src="/assets/logo.png" alt="Logo KitchenHub" />
-        <h1 class="brand-name">KitchenHub</h1>
-      </div>
-
-      <div class="menu-wrapper">
-        <button
-          class="menu-toggle"
-          id="btn-menu"
-          aria-label="Abrir menu de navegação"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <nav class="side-menu" id="menu-lateral" aria-label="Menu Principal">
-          <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">
-            &times;
-          </button>
-          <ul class="nav-links">
-            <li><a href="sessoes.html">Sessões</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li>
-              <a href="#">Favoritos <i class="fa-solid fa-star"></i></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
+    
     <main id="main-content">
+      <nav id="header" class="main-header">
+        <div class="logo-container">
+          <img src="/assets/logo.png" alt="Logo KitchenHub" />
+          <h1 class="brand-name">KitchenHub</h1>
+        </div>
+  
+        <div class="menu-wrapper">
+          <button
+            class="menu-toggle"
+            id="btn-menu"
+            aria-label="Abrir menu de navegação"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+  
+          <nav class="side-menu" id="menu-lateral" aria-label="Menu Principal">
+            <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">
+              &times;
+            </button>
+            <ul class="nav-links">
+              <li><a href="sessoes.html">Sessões</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li>
+                <a href="#">Salvos <i class="fa fa-bookmark" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </nav>
       <section class="search-section" aria-labelledby="title-theme">
         <h2 id="title-theme" class="section-title">Título da Categoria</h2>
 
@@ -57,7 +57,6 @@
       </section>
 
       <section class="recipe-grid">
-
         <article class="recipe-card">
           <figure class="recipe-card__image">
             <img
@@ -70,21 +69,172 @@
             <p>
               Informações extras sobre a receita aparecem aqui neste container.
             </p>
-            <button class="ver_receita">
-              <p id="ver-receita" ><strong>Ver receita</strong></p>
-            </button>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
           </div>
-          <div class="ver-receita-fav">
-            <button id="btn-salvar" class="bookmarkBtn">
-              <span class="IconContainer">
-                <svg viewBox="0 0 384 512" height="0.9em" class="icon">
-                  <path
-                    d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
-                  ></path>
-                </svg>
-              </span>
-              <p class="text">Salvar</p>
-            </button>
+        </article>
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
+          </figure>
+          <div class="recipe-card__info">
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
+          </figure>
+          <div class="recipe-card__info">
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
+          </figure>
+          <div class="recipe-card__info">
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
+          </figure>
+          <div class="recipe-card__info">
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
+          </div>
+        </article>
+        <article class="recipe-card">
+          <figure class="recipe-card__image">
+            <img
+              src="/assets/KitchenHub.png"
+              alt="Foto do prato de [nome da receita]"
+            />
+          </figure>
+          <div class="recipe-card__info">
+            <h1 id="name-food">Nome da comida</h1>
+            <p>
+              Informações extras sobre a receita aparecem aqui neste container.
+            </p>
+
+            <div class="ver-receita-fav">
+              <button class="ver_receita">
+                <p id="ver-receita"><strong>Ver receita</strong></p>
+              </button>
+              <button id="btn-salvar" class="bookmarkBtn">
+                <span class="IconContainer">
+                  <svg viewBox="0 0 384 512" height="0.9em" class="icon">
+                    <path
+                      d="M0 48V487.7C0 501.1 10.9 512 24.3 512c5 0 9.9-1.5 14-4.4L192 400 345.7 507.6c4.1 2.9 9 4.4 14 4.4c13.4 0 24.3-10.9 24.3-24.3V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48z"
+                    ></path>
+                  </svg>
+                </span>
+                <p class="text">Salvar</p>
+              </button>
+            </div>
           </div>
         </article>
       </section>
