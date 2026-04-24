@@ -48,7 +48,7 @@ main {
     cursor: pointer;
 }
 #massa{
-    background-image: url('/assets/macarrao-italiano.webp');
+    background-image: url('/assets/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
@@ -59,7 +59,7 @@ main {
     transition: 1s;
 }
 #pizza{
-    background-image: url('/assets/pizza.jpg');
+    background-image: url('/assets/freshly-baked-gourmet-pizza-rustic-wood-table-generated-by-ai.jpg');
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;

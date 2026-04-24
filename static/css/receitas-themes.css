@@ -15,7 +15,7 @@ main {
 #japonesa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/comida-japonesa.jpg");
+    url("/assets/japanese-food-sushi-sashimi.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -24,61 +24,51 @@ main {
 }
 
 #japonesa .recipe-card {
-  background: linear-gradient(rgba(1, 0, 0, 0.678), rgba(101, 3, 3, 0.344));
+  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
 }
 
-#japonesa .IconContainer {
-  background: linear-gradient(
-    to bottom,
-    rgb(174, 12, 25),
-    rgba(109, 106, 108, 0.626)
-  );
+#japonesa .salvar_receita{
+  background-color: rgba(171, 24, 24, 0.819);
+  color: #ffffff;
 }
 
 /* --- TEMA MASSAS --- */
 #massa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/assets/macarrao-italiano.webp");
+    url("/assets/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 #massa .section-title {
   color: #f1b40cdb;
-  
 } /* Amarelo massa */
 
-#massa .recipe-card{
-  background: linear-gradient(rgba(235, 118, 16, 0.516), rgba(154, 143, 143, 0.384));
+#massa .recipe-card {
+  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
 }
 
-#massa .IconContainer {
-  background: linear-gradient(
-    to bottom,
-    rgb(174, 98, 12),
-    rgba(206, 31, 31, 0.626)
-  );
+#massa .salvar_receita{
+  background-color: rgba(255, 118, 7, 0.819);
+  color: #ffffff;
 }
 
 /* --- TEMA PIZZAS --- */
 #pizza {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/pizzabg.jpg");
+    url("/assets/freshly-baked-gourmet-pizza-rustic-wood-table-generated-by-ai.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
-#pizza .recipe-card{
-  background: linear-gradient(rgba(2, 87, 18, 0.623), rgba(72, 1, 1, 0.384));
+#pizza .recipe-card {
+  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
 }
 
-#pizza .IconContainer {
-  background: linear-gradient(
-    to bottom,
-    rgb(0, 67, 35),
-    rgba(206, 31, 31, 0.626)
-  );
+#pizza .salvar_receita{
+  background-color: rgba(8, 157, 35, 0.819);
+  color: #ffffff;
 }
 
 /* --- TEMA SOBREMESAS --- */
@@ -90,16 +80,13 @@ main {
   background-attachment: fixed;
 }
 
-#sobremesa .recipe-card{
-  background: linear-gradient(rgba(92, 86, 91, 0.516), rgba(89, 33, 0, 0.384));
+#sobremesa .recipe-card {
+  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
 }
 
-#sobremesa .IconContainer {
-  background: linear-gradient(
-    to bottom,
-    rgb(105, 102, 98),
-    rgba(144, 80, 3, 0.723)
-  );
+#sobremesa .salvar_receita{
+  background-color: rgba(171, 24, 144, 0.674);
+  color: #ffffff;
 }
 
 /* 1. Definição de Variáveis (Design System) */
@@ -110,7 +97,7 @@ main {
   --card-bg: rgba(105, 41, 76, 0.6);
   --glass-bg: rgba(255, 255, 255, 0.1);
   --text-white: #ffffff;
-  --accent-pink: #ee08bc;
+  --effect: #b3acb1;
   --transition-default: 0.4s cubic-bezier(0.77, 0.2, 0.05, 1);
   --font-logo: "Lobster", sans-serif;
   --font-main: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -129,6 +116,7 @@ body {
 /* --- HEADER --- */
 .main-header {
   position: fixed;
+  z-index: 998;
   height: 80px;
   width: 100%;
   display: flex;
@@ -158,7 +146,7 @@ body {
   position: fixed;
   top: 15px;
   left: 20px;
-  z-index: 1001;
+  z-index: 999;
   background: var(--glass-bg);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -195,7 +183,7 @@ body {
 }
 
 .btn-close {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   background: none;
@@ -262,8 +250,8 @@ body {
 
 #search-recipe:focus {
   outline: none;
-  border-color: var(--accent-pink);
-  box-shadow: 0 0 15px rgba(238, 8, 188, 0.5);
+  border-color: var(--effect);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 /* --- GRID DE RECEITAS --- */
@@ -272,21 +260,28 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 30px;
   padding: 0 30px 50px;
-  max-width: 1300px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
 .recipe-card {
-  background: var(--card-bg);
-  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
   display: flex;
   overflow: hidden;
+  gap: 15px;
+  align-items: center;
   width: 100%;
   height: auto;
-  padding: 20px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  padding: 24px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0); /* Força aceleração de hardware sem embaçar */
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
 }
 
 .ver-receita-fav {
@@ -295,70 +290,19 @@ body {
   gap: 30px;
 }
 
-/* From Uiverse.io by vinodjangid07 */
-.bookmarkBtn {
-  width: 100px;
-  height: 40px;
-  border-radius: 40px;
-  border: 1px solid rgba(173, 14, 112, 0.349);
-  background-color: rgb(0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.salvar_receita {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
-  transition-duration: 0.3s;
-  overflow: hidden;
 }
 
-.IconContainer {
-  width: 30px;
-  height: 30px;
-  background: linear-gradient(to bottom, rgb(161, 49, 161), rgb(139, 3, 87));
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  z-index: 2;
-  transition-duration: 0.3s;
-}
-
-.icon {
-  border-radius: 1px;
-}
-
-.text {
-  height: 100%;
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  z-index: 1;
-  transition-duration: 0.3s;
-  font-size: 1.04em;
-}
-
-.bookmarkBtn:hover .IconContainer {
-  width: 90px;
-  transition-duration: 0.3s;
-}
-
-.bookmarkBtn:hover .text {
-  transform: translate(10px);
-  width: 0;
-  font-size: 0;
-  transition-duration: 0.3s;
-}
-
-.bookmarkBtn:active {
-  transform: scale(0.95);
-  transition-duration: 0.3s;
-}
-
-.recipe-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.salvar_receita:hover {
+  transform: scale(1.02);
+  transition: 0.2s;
 }
 
 .ver_receita {
@@ -372,25 +316,26 @@ body {
 }
 
 .ver_receita:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   transition: 0.2s;
 }
 
 .recipe-card__image {
   flex: 0 0 40%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .recipe-card__image img {
   width: 100%;
   height: 100%;
-  border-radius: 15px;
+  border-radius: 20px;
   object-fit: cover;
 }
 
 .recipe-card__info {
-  padding: 25px;
+  padding: 10px;
+  gap: 50px;
   font-size: 1.1rem;
   display: grid;
   grid-template-rows: repeat(3, 1fr);
