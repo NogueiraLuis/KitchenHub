@@ -1,17 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 /* 2. Reset Moderno */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Estilo Padrão (Caso algo dê errado) */
+/* Estilo Padrão */
+
 main {
-  transition: background 0.5s ease;
+  transition: background 0.2s ease;
 }
 
 /* --- TEMA JAPONESA --- */
+
 #japonesa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -24,7 +28,11 @@ main {
 }
 
 #japonesa .recipe-card {
-  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#japonesa .nav-links a:hover {
+  background: rgba(255, 6, 6, 0.329);
 }
 
 #japonesa .salvar_receita{
@@ -33,6 +41,7 @@ main {
 }
 
 /* --- TEMA MASSAS --- */
+
 #massa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -42,10 +51,14 @@ main {
 }
 #massa .section-title {
   color: #f1b40cdb;
-} /* Amarelo massa */
+}
 
 #massa .recipe-card {
-  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#massa .nav-links a:hover {
+  background: rgba(255, 147, 6, 0.329);
 }
 
 #massa .salvar_receita{
@@ -54,6 +67,7 @@ main {
 }
 
 /* --- TEMA PIZZAS --- */
+
 #pizza {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -63,8 +77,13 @@ main {
 }
 
 #pizza .recipe-card {
-  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
+  background: rgba(255, 255, 255, 0.08);
 }
+
+#pizza .nav-links a:hover {
+  background: rgba(6, 255, 102, 0.329);
+}
+
 #pizza .section-title {
   color: rgba(5, 204, 38, 0.783);
 }
@@ -84,7 +103,11 @@ main {
 }
 
 #sobremesa .recipe-card {
-  background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
+  background: rgba(255, 255, 255, 0.08);
+}
+
+#sobremesa .nav-links a:hover {
+  background: rgba(255, 6, 214, 0.329);
 }
 
 #sobremesa .section-title {
@@ -96,9 +119,8 @@ main {
   color: #ffffff;
 }
 
-/* 1. Definição de Variáveis (Design System) */
+/* 1. Definição de Variáveis */
 :root {
-  /* Ou um preto transparente para um tema dark */
   --bg-nav-dark: rgba(19, 13, 20, 0.192);
   --bg-color: #000000c4;
   --card-bg: rgba(105, 41, 76, 0.6);
@@ -128,7 +150,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px 0 80px; /* Espaço para o botão hambúrguer fixo */
+  padding: 0 20px 0 80px;
   background: var(--bg-nav-dark);
 }
 
@@ -281,9 +303,6 @@ body {
   width: 100%;
   height: auto;
   padding: 24px;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform: translateZ(0); /* Força aceleração de hardware sem embaçar */
 }
 
 .recipe-card:hover {
@@ -353,12 +372,12 @@ body {
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
   .recipe-grid {
-    grid-template-columns: 1fr; /* Uma coluna no mobile */
+    grid-template-columns: 1fr;
     padding: 0 15px 30px;
   }
 
   .recipe-card {
-    flex-direction: column; /* Imagem em cima, texto embaixo */
+    flex-direction: column;
     height: auto;
   }
 

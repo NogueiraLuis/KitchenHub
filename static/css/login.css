@@ -8,8 +8,8 @@
   display: none;
   flex-direction: column;
   align-items: center;
-  width: 90%; /* Em telas pequenas, ocupa 90% da largura */
-  max-width: 500px; /* Não passa de 500px em telas grandes */
+  width: 90%;
+  max-width: 500px;
   padding: 40px 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(152, 152, 152, 0.2);
@@ -23,18 +23,28 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(147, 92, 3, 0.713);
+  background: #152331;
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #152331
+  );
+  background: linear-gradient(
+    to right,
+    #000000,
+    #152331
+  ); 
 }
 
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%; /* Em telas pequenas, ocupa 90% da largura */
-  max-width: 500px; /* Não passa de 500px em telas grandes */
+  width: 90%; 
+  max-width: 500px; 
   padding: 40px 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(152, 152, 152, 0.2);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   backdrop-filter: blur(30px);
   border-radius: 30px;
@@ -83,7 +93,7 @@ button:hover {
 
 .cadastrar a {
   text-decoration: none;
-  color: rgb(251, 251, 0);
+  color:  #FF7F50;
 }
 
 span{
@@ -91,7 +101,7 @@ span{
 }
 
 .cadastrar a:hover {
-  color: #a80909;
+  color: red;
   text-decoration: underline;
 }
 
@@ -103,10 +113,10 @@ span{
 
 #voltar-login {
   text-decoration: none;
-  color: rgb(251, 251, 0);
+  color: #FF7F50;
 }
 
 #voltar-login:hover {
-  color: #a80909;
+  color: red;
   text-decoration: underline;
 }
