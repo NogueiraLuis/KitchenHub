@@ -10,20 +10,20 @@
 body{
     height: 100vh;
     padding: 30px;
-    background-color: rgb(252, 240, 197);
+    background-color: rgba(0, 0, 0, 0.873);
 }
 
 .back{
     font-size: 3rem;
     padding: 10px;
     display: inline-block;
-    background-color: rgba(233, 205, 103, 0.514);
+    background-color: rgba(240, 240, 240, 0.273);
     margin-bottom: 25px;
     border-radius: 10px;
 }
 
 .back a{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 

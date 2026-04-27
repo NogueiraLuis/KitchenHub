@@ -15,7 +15,7 @@ main {
 #japonesa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/japanese-food-sushi-sashimi.jpg");
+    url("/assets/sushibkg.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -36,7 +36,7 @@ main {
 #massa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("/assets/penne-pasta-tomato-sauce-with-chicken-tomatoes-wooden-table.jpg");
+    url("/assets/macarraobkg.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -65,6 +65,9 @@ main {
 #pizza .recipe-card {
   background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
 }
+#pizza .section-title {
+  color: rgba(5, 204, 38, 0.783);
+}
 
 #pizza .salvar_receita{
   background-color: rgba(8, 157, 35, 0.819);
@@ -75,13 +78,17 @@ main {
 #sobremesa {
   background:
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/sobremesabg.jpg");
+    url("/assets/sobremesabkg.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
 
 #sobremesa .recipe-card {
   background: rgba(255, 255, 255, 0.08); /* Fundo quase transparente */
+}
+
+#sobremesa .section-title {
+  color: rgba(197, 5, 204, 0.783);
 }
 
 #sobremesa .salvar_receita{
