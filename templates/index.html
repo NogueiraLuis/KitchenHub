@@ -1,58 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KitchenHub</title>
-    <link rel="stylesheet" href="/static/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
     <header>
-        <h1>Monte Seu Livro de Receitas!</h1>
+      <h1>Monte Seu Livro de Receitas!</h1>
     </header>
 
     <main>
-        <section class="principal">
+      <section class="principal">
+        <figure>
+          <img
+            src="/assets/KitchenHub.png"
+            alt="imagem ilustrativa sobre receita"
+          />
+        </figure>
+        <p>
+          Tenha suas receitas favoritas reunidas em um só lugar! Para começar o
+          seu, basta clicar no botão abaixo e encontrar inúmeros pratos! Ao
+          gostar de algum, é só abrir página da receita e depois clicar no botão
+          de salvar!
+        </p>
 
-            <figure>
-                <img src="/assets/KitchenHub.png" alt="imagem ilustrativa sobre receita">
-            </figure>
-            <p>
-                Tenha suas receitas favoritas reunidas em um só lugar! Para começar o seu, basta clicar no botão abaixo e encontrar inúmeros pratos! Ao gostar de algum, é só abrir página da receita e depois clicar no botão de salvar!
-            </p>
-            
-            <a href="sessoes.html"><button>Encontre receitas e salve no seu livro</button></a>
-            
-    
-            <p>Já tem seu livro de receitas? <a href="login.html">Faça seu login!</a></p>
+        <a href="sessoes.html"
+          ><button>Encontre receitas e salve no seu livro</button></a
+        >
 
-        </section>
+        <p>
+          Já tem seu livro de receitas? <a href="login.html">Faça seu login!</a>
+        </p>
+      </section>
 
-        <section class="complementar">
-            <div class="info">
-                <ul class="sobre--instrucoes">
-
-                    <li>
-                        <div class="icon">
-                            <div class="about__instructions__list__icon"><svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="36" cy="36" r="36" fill="#FF7F50"></circle><path d="M45.8753 18.4225H25.9557C23.7646 18.4225 21.9918 20.1971 21.9918 22.3661L21.9718 53.9154L35.9155 48L49.8592 53.9154V22.3661C49.8592 20.1971 48.0664 18.4225 45.8753 18.4225Z" fill="white"></path></svg></div>
-
-                        </div>
-                        <div class="info-text">
-                            <h3>Salve suas receitas preferidas</h3>
-                            <p>Na página da receita, clique no botão "salvar receita" e ela aparecerá no seu ambiente "Livro de receitas".</p>
-                        </div>
-                    </li>
-                    <li>
-                            <div class="about__instructions__list__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426 426" width="72" height="72"><defs></defs><g fill="none" fill-rule="evenodd"><mask id="circular-mask" fill="#fff"><circle cx="213" cy="213" r="213"></circle></mask><circle cx="213" cy="213" r="213" fill="#FF7F50"></circle><g mask="url(#circular-mask)"><path fill="#FFFFFF" d="M211.685 62c-11.439 3.502-19.465 11.205-20.054 27.132-.538 14.586 11.798 25.756 19.832 47.093 2.663 7.074 11.505 46.004 11.505 46.004s-51.983 2.375-71.585 2.793c-19.597.42-32.639 6.076-40.466 14.8-7.835 8.72 0 22.718 0 22.718s-12.874 10.007-13.85 20.506c-.974 10.503 8.873 16.91 8.873 16.91s-9.083 8.994-6.314 19.492c2.765 10.503 15.947 13.3 15.947 13.3s-9.418 7.593-6.048 18.497c3.365 10.9 18.704 17.261 58.605 23.322 39.9 6.06 72.848-5.011 113.334-6.509 15.896-.585 131.73 36.683 131.73 36.683l12.605-118.31s-101.638-23.236-123.182-46.5C273.126 168.08 218.385 76.7 211.685 62"></path><path fill="#FFA07A" d="M217.531 217.185c-1.763-10.277-10.315-14.86-19.172-18.135-10.46-3.873-25.51-5.9-36.719-4.867 10.097 2.102 23.143 3.498 32.44 8.116 8.889 4.414 20.795 11.072 15.19 20.638-1.34 2.297-4.012 5.792-6.87 6.322-7.57 1.397-32.117-1.872-35.88-2.515-12.095-2.067-25.963-3.807-38.44-3.822 14.247 5.109 31.302 5.39 46.188 8.397 6.744 1.365 13.771 2.597 20.355 4.66 3.537 1.104 12.413 4.797 14.207 11.29 2.04 6.19-4.13 15.191-13.564 14.598-16.26-1.014-57.443-4.426-67.049-2.051 11.72 2.554 21.275 3.611 33.19 4.848 6.294.655 12.592 1.232 18.88 1.93 4.047.452 16.063.363 24.561 6.482 7.375 5.308 4.868 16.664-5.308 19.32-10.065 2.621-54.412-1.478-66.81 1.178 11.965.905 23.91 1.431 35.782 3.042 6.29.85 12.745 2.153 18.502 4.56 7.219 3.014 7.901 8.427 6.626 10.681-1.447 2.57-3.978 7.227-25.978 9.427-9.551.955-22.683.456-28.97 2.671 15.094 3.058 31.138 1.377 46.274-.838 4.4-.644 24.012-6.685 15.58-22.925 14.598-5.456 22.293-24.757 5.683-35.72 13.662-4.656 14.329-24.574 5.994-30.326 3.245-2.141 6.654-9.118 5.308-16.961M222.102 196.839s4.438 22.834 10.955 37.79c7.172 16.455 28.341 32.55 28.341 32.55s-27.701-8.654-34.873-25.217c-7.278-16.813-6.747-30.97-4.423-45.123M294.513 288.06s-1.77 12.136-2.656 18.049c-.881 5.912-5.308 16.138-5.308 16.138s9.29-6.568 10.176-16.138c.885-9.57-2.212-18.05-2.212-18.05"></path></g></g></svg></div>
-                        <div class="info-text">
-                            <h3>Acesso rápido</h3>
-                            <p>Encontre de forma fácil e rápida as suas receitas. Basta ir em Menu > Livro de Receitas.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
+      <section class="complementar">
+        <div class="info">
+          <ul class="sobre--instrucoes">
+            <li>
+              <div class="icon">
+                <div class="about__instructions__list__icon">
+                  <svg
+                    width="72"
+                    height="72"
+                    viewBox="0 0 72 72"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle cx="36" cy="36" r="36" fill="#FF7F50"></circle>
+                    <path
+                      d="M45.8753 18.4225H25.9557C23.7646 18.4225 21.9918 20.1971 21.9918 22.3661L21.9718 53.9154L35.9155 48L49.8592 53.9154V22.3661C49.8592 20.1971 48.0664 18.4225 45.8753 18.4225Z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="info-text">
+                <h3>Salve suas receitas preferidas</h3>
+                <p>
+                  Na página da receita, clique no botão "salvar receita" e ela
+                  aparecerá no seu ambiente "Livro de receitas".
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="about__instructions__list__icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 426 426"
+                  width="72"
+                  height="72"
+                >
+                  <defs></defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <mask id="circular-mask" fill="#fff">
+                      <circle cx="213" cy="213" r="213"></circle>
+                    </mask>
+                    <circle cx="213" cy="213" r="213" fill="#FF7F50"></circle>
+                    <g mask="url(#circular-mask)">
+                      <path
+                        fill="#FFFFFF"
+                        d="M211.685 62c-11.439 3.502-19.465 11.205-20.054 27.132-.538 14.586 11.798 25.756 19.832 47.093 2.663 7.074 11.505 46.004 11.505 46.004s-51.983 2.375-71.585 2.793c-19.597.42-32.639 6.076-40.466 14.8-7.835 8.72 0 22.718 0 22.718s-12.874 10.007-13.85 20.506c-.974 10.503 8.873 16.91 8.873 16.91s-9.083 8.994-6.314 19.492c2.765 10.503 15.947 13.3 15.947 13.3s-9.418 7.593-6.048 18.497c3.365 10.9 18.704 17.261 58.605 23.322 39.9 6.06 72.848-5.011 113.334-6.509 15.896-.585 131.73 36.683 131.73 36.683l12.605-118.31s-101.638-23.236-123.182-46.5C273.126 168.08 218.385 76.7 211.685 62"
+                      ></path>
+                      <path
+                        fill="#FFA07A"
+                        d="M217.531 217.185c-1.763-10.277-10.315-14.86-19.172-18.135-10.46-3.873-25.51-5.9-36.719-4.867 10.097 2.102 23.143 3.498 32.44 8.116 8.889 4.414 20.795 11.072 15.19 20.638-1.34 2.297-4.012 5.792-6.87 6.322-7.57 1.397-32.117-1.872-35.88-2.515-12.095-2.067-25.963-3.807-38.44-3.822 14.247 5.109 31.302 5.39 46.188 8.397 6.744 1.365 13.771 2.597 20.355 4.66 3.537 1.104 12.413 4.797 14.207 11.29 2.04 6.19-4.13 15.191-13.564 14.598-16.26-1.014-57.443-4.426-67.049-2.051 11.72 2.554 21.275 3.611 33.19 4.848 6.294.655 12.592 1.232 18.88 1.93 4.047.452 16.063.363 24.561 6.482 7.375 5.308 4.868 16.664-5.308 19.32-10.065 2.621-54.412-1.478-66.81 1.178 11.965.905 23.91 1.431 35.782 3.042 6.29.85 12.745 2.153 18.502 4.56 7.219 3.014 7.901 8.427 6.626 10.681-1.447 2.57-3.978 7.227-25.978 9.427-9.551.955-22.683.456-28.97 2.671 15.094 3.058 31.138 1.377 46.274-.838 4.4-.644 24.012-6.685 15.58-22.925 14.598-5.456 22.293-24.757 5.683-35.72 13.662-4.656 14.329-24.574 5.994-30.326 3.245-2.141 6.654-9.118 5.308-16.961M222.102 196.839s4.438 22.834 10.955 37.79c7.172 16.455 28.341 32.55 28.341 32.55s-27.701-8.654-34.873-25.217c-7.278-16.813-6.747-30.97-4.423-45.123M294.513 288.06s-1.77 12.136-2.656 18.049c-.881 5.912-5.308 16.138-5.308 16.138s9.29-6.568 10.176-16.138c.885-9.57-2.212-18.05-2.212-18.05"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="info-text">
+                <h3>Acesso rápido</h3>
+                <p>
+                  Encontre de forma fácil e rápida as suas receitas. Basta ir em
+                  Menu > Livro de Receitas.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-</body>
+  </body>
 </html>

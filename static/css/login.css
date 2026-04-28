@@ -24,24 +24,16 @@ main {
   align-items: center;
   justify-content: center;
   background: #152331;
-  background: -webkit-linear-gradient(
-    to right,
-    #000000,
-    #152331
-  );
-  background: linear-gradient(
-    to right,
-    #000000,
-    #152331
-  ); 
+  background: -webkit-linear-gradient(to right, #000000, #152331);
+  background: linear-gradient(to right, #000000, #152331);
 }
 
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%; 
-  max-width: 500px; 
+  width: 90%;
+  max-width: 500px;
   padding: 40px 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(152, 152, 152, 0.2);
@@ -84,20 +76,19 @@ button:hover {
   transform: scale(1.01);
 }
 
-
 .cadastrar {
   display: flex;
   margin-top: 15px;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 .cadastrar a {
   text-decoration: none;
-  color:  #FF7F50;
+  color: #ff7f50;
 }
 
-span{
-  color: #fff;
+span {
+  color: #e0e0e0;
 }
 
 .cadastrar a:hover {
@@ -108,12 +99,12 @@ span{
 #backtologin {
   display: flex;
   margin-top: 15px;
-  color: #fff;
+  color: #e0e0e0;
 }
 
 #voltar-login {
   text-decoration: none;
-  color: #FF7F50;
+  color: #ff7f50;
 }
 
 #voltar-login:hover {

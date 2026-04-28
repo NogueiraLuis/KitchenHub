@@ -105,7 +105,7 @@ header {
 }
 
 h1 {
-  color: #fff;
+  color: #e0e0e0;
   font-size: 300%;
   margin-right: 23%;
   font-family: "Lobster", sans-serif;
@@ -120,7 +120,7 @@ main {
   gap: 20px;
 }
 button {
-  color: #fff;
+  color: #e0e0e0;
   font-size: 90%;
   border: none;
   border-radius: 10px;
