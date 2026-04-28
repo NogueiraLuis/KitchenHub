@@ -9,16 +9,41 @@
 
 body{
     height: 100vh;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.873);
+    background: #152331;
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #152331
+  );
+  background: linear-gradient(
+    to right,
+    #000000,
+    #152331
+  ); 
+  color: #fff;
 }
 
+header{
+    display: flex;
+    width: 100%;
+    background: #152331;
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #c8cccf
+  );
+  background: linear-gradient(
+    to right,
+    #000000,
+    #4b4b4b
+  ); 
+}
+ 
 .back{
     font-size: 3rem;
     padding: 10px;
     display: inline-block;
-    background-color: rgba(240, 240, 240, 0.273);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     border-radius: 10px;
 }
 
@@ -26,23 +51,17 @@ body{
     color: rgb(255, 255, 255);
 }
 
-
-.back:hover{
-    transform: scale(1.05);
-    background-color: rgba(166, 154, 110, 0.514);
-}
-
 .recipe-card{
     display: flex;
     flex-direction: column;
     align-items: start;
+    padding: 15px;
 }
 
 .recipe-header{
     display: flex;
-    gap: 50px;
+    gap: 10%;
     width: 100%;
-    background-color: rgba(233, 205, 103, 0.514);
     padding: 15px;
     border-radius: 15px;
 }
@@ -54,7 +73,7 @@ body{
 }
 
 .recipe-visual{
-    background-color:  rgba(242, 235, 209, 0.836);
+    background-color:  rgba(233, 233, 233, 0.836);
     border-radius: 15px;
 }
 
@@ -70,7 +89,7 @@ h2{
 }
 
 .recipe-content{
-    margin: 50px 0;
+    margin: 30px 0;
     background-color:  rgba(233, 205, 103, 0.514);
     width: 100%;
     padding: 15px;
