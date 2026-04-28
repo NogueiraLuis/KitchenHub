@@ -59,6 +59,12 @@ header {
 .recipe-visual {
   background-color: rgba(233, 233, 233, 0.836);
   border-radius: 15px;
+  object-fit: cover;
+  object-position: center;
+  max-width: 50%;
+  max-height: 50%;
+  width: 500px;
+
 }
 
 .recipe-meta {
