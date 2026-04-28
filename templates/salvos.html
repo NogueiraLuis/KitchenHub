@@ -14,9 +14,34 @@
   <body>
     <header>
       <h1>Livro de Receitas</h1>
+
+       <div class="menu-wrapper">
+          <button
+            class="menu-toggle"
+            id="btn-menu"
+            aria-label="Abrir menu de navegação"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+  
+          <nav class="side-menu" id="menu-lateral" aria-label="Menu Principal">
+            <button class="btn-close" id="btn-fechar" aria-label="Fechar menu">
+              &times;
+            </button>
+            <ul class="nav-links">
+              <li><a href="sessoes.html">Sessões</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="index.html">Menu Principal</a></li>
+              <li>
+                <a href="salvos.html">Livro de Receitas <i class="fa fa-bookmark" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
     </header>
  <!-- parte principal do site -->
     <main>
+
       <nav class="nav">
         <button>Japonesas</button>
         <button> Massas</button>
@@ -29,5 +54,6 @@
 
 
     <script src="/static/js/livro_de_receitas.js"></script>
+    <script src="/static/js/menuhamb.js"></script>
   </body>
 </html>
